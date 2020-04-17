@@ -7,4 +7,4 @@ before_install:
     - docker build -t layzie/simpleweb -f Dockerfile.dev .
 
 script:
-    - docker run layzie/simpleweb npm run test -- --coverage
+    - docker run -e CI=true layzie/simpleweb npm run test -- --coverage
