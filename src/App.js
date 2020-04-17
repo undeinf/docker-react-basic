@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello React
+          Sajid Bhai aur Hansraj ki bund faadni hai
         </a>
       </header>
     </div>
