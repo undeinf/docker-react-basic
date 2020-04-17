@@ -19,12 +19,6 @@ services:
             - /app/node_modules
             - .:/app
         command: ["npm","run","test"]
-    build-src:
-        build: .
-        ports: 
-            - 8081:80
-
-
 
 
 
