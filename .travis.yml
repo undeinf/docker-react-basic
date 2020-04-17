@@ -8,3 +8,17 @@ before_install:
 
 script:
     - docker run -e CI=true layzie/simpleweb npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: us-east-2
+    app: "docker-react-sample"
+    env: "DockerReactSample-env"
+    bucket_name: "elasticbeanstalk-us-east-2-526744321049"
+    bucker_path: "docker-react-sample"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+http://dockerreactsample-env.eba-4iw2d62c.us-east-2.elasticbeanstalk.com/
